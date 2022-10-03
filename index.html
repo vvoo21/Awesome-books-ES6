@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome books | ES6</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a class="logo" href="#">Awesome Books</a>
+      <ul class="nav-menu">
+        <li class="nav-list" id="nav-list"><a href="#">List</a></li>
+        <li class="nav-list" id="navAddNew"><a href="#">Add new</a></li>
+        <li class="nav-list" id="navContact"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-wrap">
+    <div class="date-wrap">
+      <p class="date-text"></p>
+    </div>
+    <section class="list">
+      <h1 class="main-tittle">All awesome Books</h1>
+      <div id="list-books"></div>
+      <div id="devider"></div>
+    </section>
+    <section class="add-new">
+      <form id="form" action="post">
+        <h2 class="main-tittle">Add a new book</h2>
+        <input type="text" name="title" id="title" class="formInput" placeholder="Title" aria-label="tittle" required>
+        <input type="text" name="author" id="author" class="formInput" placeholder="Author" aria-label="author" required>
+        <button id="addBttn" type="submit" class="formInput">Add</button>
+      </form>
+    </section>
+    <section class="contact-info">
+      <h2 class="main-tittle">Contact information</h2>
+      <p class="contact-text">Do have any questions or just want to say "hello"? <br> You can reach out to us!</p>
+      <ul class="contact-menu">
+        <li class="info-list">Our e-mail: softwaredeveloper@mail.com</li>
+        <li class="info-list">Our phone number: 0043586534422</li>
+        <li class="info-list">Our address: 1500 Ottawa st, 84503 Montreal, Canada</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-wrap">
+      <p class="footer-text">Copyright</p>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
