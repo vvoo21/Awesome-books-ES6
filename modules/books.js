@@ -13,8 +13,12 @@ export const addBook= (e) => {
   let book = new Books(id, tittleValue, author);
   
   books = [...books, book];
+
+  localStorage.setItem('books', JSON.stringify(books));
   
   Books.createHTML();
   
   form.reset();
+
+
 }

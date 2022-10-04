@@ -1,4 +1,4 @@
-import {cleanHTML, syncStorage} from './functions.js';
+import {cleanHTML} from './functions.js';
 import {books} from './books.js';
 import {listBooks} from './selectors.js';
 
@@ -43,14 +43,14 @@ class Books {
           Books.createHTML();
         }
   
-        // Remove function
-        removeBtn.onclick = () => {
-          removeBook(book.id);
-        };
+        // // Remove function
+        // removeBtn.onclick = () => {
+        //   removeBook(book.id);
+        // };
       });
     }
   
-    syncStorage();
+    // syncStorage();
   }
 }
 

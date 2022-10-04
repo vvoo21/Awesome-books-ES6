@@ -8,10 +8,10 @@ export function cleanHTML() {
   }
 }
 
-// add books to LocalStorage
-export function syncStorage() {
-  localStorage.setItem('book', JSON.stringify(books));
-}
+// // add books to LocalStorage
+// export function syncStorage() {
+//   localStorage.setItem('book', JSON.stringify(books));
+// }
 
 //Display date
 export function displayDate() {
