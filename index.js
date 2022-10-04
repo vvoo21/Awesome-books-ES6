@@ -1,8 +1,6 @@
 import {addBook, books} from './modules/books.js';
 import {displayList, displayAddNew, displayContact} from './modules/functions.js';
 import {form, navList, navAddNew, navContact, listBooks} from './modules/selectors.js';
-import Books from './modules/UI.js';
-
 
 function eventListeners() {
   // add book
@@ -36,6 +34,12 @@ function eventListeners() {
         removeBtn.classList.add('btn-remove');
         removeBtn.innerText = 'Remove';
         bookContainer.appendChild(removeBtn);
+
+        removeBtn.addEventListener('click', (parameter) =>{
+          if (parameter.target.classList.value === 'btn-remove') {
+            listBooks.removeChild(parameter.target.parentElement);
+          }
+        });
     }     
    
   });
