@@ -1,5 +1,5 @@
 import {listBooks, list, addNew, contact} from './selectors.js';
-import {books} from './books.js';
+import { DateTime } from './luxon.js';
 
 // Clean HTML
 export function cleanHTML() {
@@ -8,17 +8,14 @@ export function cleanHTML() {
   }
 }
 
-// // add books to LocalStorage
-// export function syncStorage() {
-//   localStorage.setItem('book', JSON.stringify(books));
-// }
-
 //Display date
 export function displayDate() {
-  document.querySelector('.date-text').innerHTML = Date();
+  const date = document.querySelector('.date-text');
+  setInterval(() => {
+    date.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
+  }, 0);
 }
-
-window.onload = displayDate();
+displayDate();
 
 //Display sections
 export function displayList() {
