@@ -34,23 +34,16 @@ class Books {
   
         const removeBtn = document.createElement('button');
         removeBtn.classList.add('btn-remove');
-        removeBtn.innerText = 'Remove';
+        removeBtn.innerHTML = 'Remove';
         bookContainer.appendChild(removeBtn);
-  
-        function removeBook(id) {
-          books = books.filter((book) => book.id !== id);
-  
-          Books.createHTML();
-        }
-  
-        // // Remove function
-        // removeBtn.onclick = () => {
-        //   removeBook(book.id);
-        // };
+
+        removeBtn.addEventListener('click', (parameter) =>{
+          if (parameter.target.classList.value === 'btn-remove') {
+            listBooks.removeChild(parameter.target.parentElement);
+          }
+        });
       });
     }
-  
-    // syncStorage();
   }
 }
 
