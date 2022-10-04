@@ -1,8 +1,8 @@
-import {addBook, books} from './modules/books.js';
+import {addBook} from './modules/books.js';
 import {displayList, displayAddNew, displayContact} from './modules/functions.js';
 import {form, navList, navAddNew, navContact, listBooks} from './modules/selectors.js';
 
-function eventListeners() {
+const eventListeners = () => {
   // add book
   form.addEventListener('submit', addBook);
 

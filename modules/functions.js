@@ -2,14 +2,14 @@ import {listBooks, list, addNew, contact} from './selectors.js';
 import { DateTime } from './luxon.js';
 
 // Clean HTML
-export function cleanHTML() {
+export const cleanHTML = () => {
   while (listBooks.firstChild) {
     listBooks.removeChild(listBooks.firstChild);
   }
 }
 
 //Display date
-export function displayDate() {
+export const displayDate = () => {
   const date = document.querySelector('.date-text');
   setInterval(() => {
     date.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
@@ -18,19 +18,19 @@ export function displayDate() {
 displayDate();
 
 //Display sections
-export function displayList() {
+export const displayList = () => {
   list.style.display = 'flex';
   addNew.style.display = 'none';
   contact.style.display = 'none';
 }
 
-export function displayAddNew() {
+export const displayAddNew = () => {
   list.style.display = 'none';
   addNew.style.display = 'flex';
   contact.style.display = 'none';
 }
 
-export function displayContact() {
+export const displayContact = () => {
   list.style.display = 'none';
   addNew.style.display = 'none';
   contact.style.display = 'flex';
